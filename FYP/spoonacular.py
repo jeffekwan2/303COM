@@ -227,7 +227,7 @@ def viewBookmark():
         sql = "SELECT * FROM tbl_savedrecipe WHERE UserID = %s"
         cursor.execute(sql, session['UserID'])
         rows = cursor.fetchall()
-        return render_template('recbookmark.html', recipes=rows)
+        return render_template('recBookmark.html', recipes=rows)
     else:
         return redirect(url_for('signIn'))
     
